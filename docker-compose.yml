@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  node:
+    build:
+      context: ./
+    image: wmde/vuex-helpers
+    volumes:
+      - '~/.npm:/.npm'
+      - './:/app'
+    working_dir: /app
+    environment:
+      - NODE_DEBUG
