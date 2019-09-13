@@ -1,0 +1,36 @@
+{
+  "name": "wmde-vuex-helpers",
+  "version": "0.1.0",
+  "description": "Helper functions to ease working with Vuex, Centralized State Management for Vue.js.",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmde/vuex-helpers.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vuex",
+    "util"
+  ],
+  "author": "The Wikidata team",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/wmde/vuex-helpers/issues"
+  },
+  "homepage": "https://github.com/wmde/vuex-helpers#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.5.3",
+    "vue": "^2.6.10",
+    "vuex": "^3.1.1"
+  },
+  "peerDependencies": {
+    "vuex": "^3.1.1"
+  }
+}

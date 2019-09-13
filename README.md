@@ -17,3 +17,9 @@ docker-compose build --build-arg UID=$(id -u) --build-arg GID=$(id -g) node
 ```sh
 docker-compose run --rm node npm install
 ```
+
+### Running code quality tools
+
+```sh
+docker-compose run --rm node npm test
+```
