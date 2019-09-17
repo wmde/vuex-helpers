@@ -1,5 +1,5 @@
 {
-  "name": "wmde-vuex-helpers",
+  "name": "@wmde/vuex-helpers",
   "version": "0.1.0",
   "description": "Helper functions to ease working with Vuex, Centralized State Management for Vue.js.",
   "scripts": {
