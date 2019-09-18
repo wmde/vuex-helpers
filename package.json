@@ -6,7 +6,8 @@
     "lint": "eslint --ext=ts .",
     "fix": "npm run lint -- --fix",
     "test": "npm run lint && jest",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
