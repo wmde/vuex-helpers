@@ -3,7 +3,8 @@ name: Node CI
 on: [ push ]
 
 jobs:
-  build:
+
+  test:
 
     runs-on: ubuntu-latest
 
@@ -17,9 +18,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and test
+      - name: npm install, ensure it builds, and test
         run: |
           npm ci
+          npm run build
           npm test
         env:
           CI: true
