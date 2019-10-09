@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-underscore-dangle, @typescript-eslint/no-explicit-any */
 import { ActionTree, GetterTree, MutationTree, StoreOptions, Store, Module } from 'vuex';
 
 type HotUpdatableStoreProperties = {
@@ -53,6 +53,7 @@ export default function hotUpdateDeep<T extends Store<any>>( store: T, overrides
 	};
 
 	Object.entries( storeModules ).forEach( ( [ moduleName, module ] ) => {
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		storeOptions.modules![ moduleName ] = getModuleOverrides(
 			( module as any )._rawModule,
 			overrides.modules ? overrides.modules[ moduleName ] : undefined,

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { ActionContext, Commit, Dispatch } from 'vuex';
 
 export default function newMockStore(

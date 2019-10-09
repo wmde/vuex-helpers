@@ -3,19 +3,11 @@ module.exports = {
 		'wikimedia',
 		'wikimedia/node',
 		'wikimedia/language/rules-es2017',
+		'@wmde/wikimedia-typescript',
 	],
 	plugins: [
-		'@typescript-eslint',
 		'filenames',
 	],
-	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		parser: '@typescript-eslint/parser',
-		sourceType: 'module',
-		ecmaFeatures: {
-			impliedStrict: true,
-		},
-	},
 	root: true,
 	rules: {
 		// We need a shared TS eslint config; copy from data-bridge
@@ -48,50 +40,6 @@ module.exports = {
 		'no-alert': 'error',
 		'no-console': 'error',
 		'no-implied-eval': 'error',
-
-		/* customize recommended */
-		'@typescript-eslint/array-type': [ 'error', { 'default': 'array' } ],
-		'@typescript-eslint/ban-types': 'off',
-		'@typescript-eslint/camelcase': [ 'error', { 'properties': 'always' } ],
-		'@typescript-eslint/explicit-function-return-type': [ 'error', {
-			allowExpressions: true,
-			allowTypedFunctionExpressions: true,
-			allowHigherOrderFunctions: true,
-		} ],
-		'@typescript-eslint/explicit-member-accessibility': [ 'error', { accessibility: 'explicit' } ],
-		'@typescript-eslint/generic-type-naming': [ 'error', '^[A-Z]+$' ],
-		// aligned to https://github.com/wikimedia/eslint-config-wikimedia/blob/master/common.json#L21
-		'@typescript-eslint/indent': [ 'error', 'tab', { 'SwitchCase': 1 } ],
-		'@typescript-eslint/interface-name-prefix': 'off',
-		'no-empty-function': 'off',
-		'@typescript-eslint/no-empty-function': 'error',
-		'@typescript-eslint/no-empty-interface': [ 'error', { allowSingleExtends: true } ],
-		'@typescript-eslint/no-extraneous-class': [ 'error', { allowStaticOnly: true } ],
-		'@typescript-eslint/no-this-alias': 'error',
-		// problematic in TypeScript / ES6
-		'@typescript-eslint/no-unused-vars': [ 'error', { argsIgnorePattern: '^_' } ],
-		'no-undef': 'error',
-		'@typescript-eslint/no-useless-constructor': 'error',
-		'@typescript-eslint/prefer-function-type': 'error',
-		'@typescript-eslint/type-annotation-spacing': [ 'error', {
-			'before': false,
-			'after': true,
-			overrides: {
-				arrow: {
-					before: true,
-					after: true,
-				},
-				colon: {
-					before: false,
-					after: true,
-				},
-			},
-		} ],
-		'@typescript-eslint/unified-signatures': 'error',
-
-		// required
-		'@typescript-eslint/no-require-imports': 'off',
-		'@typescript-eslint/no-var-requires': 'off',
 	},
 	overrides: [ {
 		files: [ '**/*.ts' ],
