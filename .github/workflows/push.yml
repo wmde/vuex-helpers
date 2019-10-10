@@ -1,4 +1,4 @@
-on: push
+on: [ push, release ]
 name: Build, Test, and Publish
 jobs:
   build:
@@ -16,6 +16,10 @@ jobs:
       run: npm run build
     - name: Test
       run: npm test
+    - name: Print GitHub Context # Debug step
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
     - name: Publish
       if: github.event_name == 'release' && github.event.action == 'created'
       env:
