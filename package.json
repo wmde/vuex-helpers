@@ -1,6 +1,6 @@
 {
   "name": "@wmde/vuex-helpers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Helper functions to ease working with Vuex, Centralized State Management for Vue.js.",
   "scripts": {
     "lint": "eslint --ext=ts .",
