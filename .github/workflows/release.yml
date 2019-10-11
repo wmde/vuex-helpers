@@ -22,4 +22,6 @@ jobs:
     - name: Publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      run: npm publish --access public --@wmde:registry=https://registry.npmjs.org/
+      run: |
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+        npm publish --access public
