@@ -29,6 +29,7 @@ function hotUpdateDeep(store, overrides) {
         modules: {},
     };
     Object.entries(storeModules).forEach(([moduleName, module]) => {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         storeOptions.modules[moduleName] = getModuleOverrides(module._rawModule, overrides.modules ? overrides.modules[moduleName] : undefined);
     });
     store.hotUpdate(storeOptions);
