@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getter = exports.mutation = exports.action = void 0;
 /**
  * @param namespacesAndName namespace1, namespace2, ..., mutationOrActionOrGetterName
  */
